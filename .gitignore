@@ -1,0 +1,3 @@
+temp/           # Ignore the temp directory
+node_modules/   # Ignore the node_modules directory
+g

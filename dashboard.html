@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TABESA Medical Manuals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="dashboard.html">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.html">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Dashboard Content -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="dashboard.html" class="list-group-item list-group-item-action active">Overview</a>
+                <a href="#uploadManual" class="list-group-item list-group-item-action">Upload Manual</a>
+                <a href="/manual.html" class="list-group-item list-group-item-action"> Manuals</a>
+                <a href="settings.html" class="list-group-item list-group-item-action">Account Settings</a>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Section -->
+        <div class="col-md-9">
+            <h2 class="mb-4">Welcome to Your Dashboard</h2>
+
+            <!-- Upload Manual Form -->
+            <div class="card mb-4" id="uploadManual">
+                <div class="card-header">
+                    <h4>Upload New Manual</h4>
+                </div>
+                <div class="card-body">
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="manualTitle">Manual Title</label>
+                            <input type="text" class="form-control" id="manualTitle" placeholder="Enter manual title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="manualDescription">Manual Description</label>
+                            <textarea class="form-control" id="manualDescription" rows="3" placeholder="Enter manual description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="manualFile">Choose Manual File</label>
+                            <input type="file" class="form-control-file" id="manualFile" accept="application/pdf" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Upload Manual</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Uploaded Manuals Section -->
+            <h2>Uploaded Manuals</h2>
+            <div id="manualGallery" class="row">
+                <!-- Uploaded manuals will appear here -->
+            </div>
+
+            <!-- Recent Activity (Optional for future expansion) -->
+            <h3 class="mt-5">Recent Activity</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Uploaded "Defibrillator Model X Manual" on 10/05/2024</li>
+                <li class="list-group-item">Edited "Ultrasound Machine 2021 Guide" on 09/30/2024</li>
+                <li class="list-group-item">Viewed "MRI Machine Maintenance Manual" on 09/29/2024</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Follow Us -->
+            <div class="col-md-4 footer-section">
+                <h5>Follow Us</h5>
+                <div class="links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+
+            <!-- Manufacturers -->
+            <div class="col-md-4 footer-section">
+                <h5>Manufacturers</h5>
+                <div class="links">
+                    <a href="https://example.com/manufacturer1"><i class="fas fa-industry"></i> GE</a>
+                    <a href="https://example.com/manufacturer2"><i class="fas fa-industry"></i> JOHNSON & JOHNSON</a>
+                    <a href="https://example.com/manufacturer3"><i class="fas fa-industry"></i> SIEMENS</a>
+                    <a href="https://example.com/manufacturer4"><i class="fas fa-industry"></i> PHILIPS</a>
+                    <a href="https://example.com/manufacturer5"><i class="fas fa-industry"></i> ABBOT</a>
+                </div>
+            </div>
+
+            <!-- Hospitals -->
+            <div class="col-md-4 footer-section">
+                <h5>Hospitals</h5>
+                <div class="links">
+                    <a href="https://example.com/hospital1"><i class="fas fa-hospital"></i> MUHIMBILI NH</a>
+                    <a href="https://example.com/hospital2"><i class="fas fa-hospital"></i> KCMC</a>
+                    <a href="https://example.com/hospital3"><i class="fas fa-hospital"></i> REGENCY</a>
+                    <a href="https://example.com/hospital4"><i class="fas fa-hospital"></i> BUGANDO HOSP</a>
+                    <a href="https://example.com/hospital5"><i class="fas fa-hospital"></i> AGAKHAN HOSPS</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 footer-section">
+                <h5>Associations</h5>
+                <div class="links">
+                    <a href="https://example.com/association1"><i class="fas fa-users"></i> TMA</a>
+                    <a href="https://example.com/association2"><i class="fas fa-users"></i> TABRA</a>
+                    <a href="https://example.com/association3"><i class="fas fa-users"></i> TPHA</a>
+                    <a href="https://example.com/association4"><i class="fas fa-users"></i> AMET</a>
+                </div>
+            </div>
+        </div>
+        <p class="mt-4">&copy; 2024 TABESA Medical Equipment Manuals. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Load existing manuals from local storage and display them
+    function loadManuals() {
+        const manuals = JSON.parse(localStorage.getItem('manuals')) || [];
+        const manualGallery = document.getElementById('manualGallery');
+        manualGallery.innerHTML = '';
+
+        manuals.forEach(manual => {
+            const colDiv = document.createElement('div');
+            colDiv.className = 'col-md-4';
+            colDiv.innerHTML = `
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">${manual.title}</h5>
+                        <p class="card-text">${manual.description}</p>
+                        <a href="${manual.file}" class="btn btn-primary" target="_blank">View Manual</a>
+                        <button class="btn btn-danger mt-2" onclick="deleteManual(${manual.id})">Delete</button>
+                    </div>
+                </div>
+            `;
+            manualGallery.appendChild(colDiv);
+        });
+    }
+
+    // Handle form submission to upload new manual
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const title = document.getElementById('manualTitle').value;
+        const description = document.getElementById('manualDescription').value;
+        const fileInput = document.getElementById('manualFile');
+        const file = fileInput.files[0];
+
+        if (file && file.type === 'application/pdf') {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const manuals = JSON.parse(localStorage.getItem('manuals')) || [];
+                const newManual = {
+                    id: manuals.length ? manuals[manuals.length - 1].id + 1 : 1,
+                    title,
+                    description,
+                    file: e.target.result
+                };
+
+                manuals.push(newManual);
+                localStorage.setItem('manuals', JSON.stringify(manuals));
+
+                loadManuals();
+                document.getElementById('uploadForm').reset();
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a valid PDF file.');
+        }
+    });
+
+    // Delete a manual
+    function deleteManual(id) {
+        const manuals = JSON.parse(localStorage.getItem('manuals')) || [];
+        const updatedManuals = manuals.filter(manual => manual.id !== id);
+        localStorage.setItem('manuals', JSON.stringify(updatedManuals));
+        loadManuals();
+    }
+
+    // Load manuals when the page is ready
+    document.addEventListener('DOMContentLoaded', loadManuals);
+</script>
+</body>
+</html>

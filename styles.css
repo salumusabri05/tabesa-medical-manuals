@@ -1,0 +1,99 @@
+/* General Footer Styles */
+/* General Footer Styles */
+footer {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    padding: 30px 0;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Bootstrap primary color for headings */
+}
+
+footer .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer .footer-section h5 {
+    margin-bottom: 15px;
+}
+
+footer .footer-section .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .footer-section .links a {
+    display: inline-flex;
+    align-items: center;
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffffff; /* White background for links */
+    border: 1px solid #007bff; /* Border matching link color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .footer-section .links a i {
+    margin-right: 8px;
+    font-size: 1.2rem; /* Adjust icon size as needed */
+}
+
+footer .footer-section .links a:hover {
+    color: #ffffff;
+    background-color: #007bff; /* Hover effect with Bootstrap primary color */
+}
+
+footer .text-center p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d; /* Light gray text for copyright */
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    footer .footer-section {
+        text-align: center;
+    }
+
+    footer .footer-section .links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+#fornax {
+    color: #007bff;
+    font-size: 40px;
+}
+#manual {
+    background-color:darkturquoise;
+    border-radius: 10px;
+}
+.chat-gpt {
+    background-color: #f8f9fa;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+#prompt {
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    color: black;
+    padding: 3px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    margin: 5px;
+    padding: 18px 20px;
+    border-radius: 10px;
+}
